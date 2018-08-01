@@ -38,14 +38,14 @@ public class StudentJDBCTemplate implements StudentDAO {
 
     @Override
     public void delete(Integer id) {
-        String SQL = "delete from students where id = ?";
+        String SQL = "delete from student where id = ?";
         jdbcTemplate.update(SQL, id);
         System.out.println("Deleted Record with ID = " + id );
     }
 
     @Override
     public void update(Integer id, Integer age) {
-        String SQL = "update students set age = ? where id = ?";
+        String SQL = "update student set age = ? where id = ?";
         jdbcTemplate.update(SQL, age, id);
         System.out.println("Updated Record with ID = " + id );
     }
